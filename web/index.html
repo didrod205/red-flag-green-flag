@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>red flag or green flag? — decode what your date said</title>
+    <meta
+      name="description"
+      content="Paste what your date said or did and see the red flags 🚩 and green flags 🟢 decoded into what they really mean: 'doesn't believe in labels' → wants you available but not committed, 'text me when you get home safe' → genuinely cares. 100% in your browser. No AI, nothing uploaded."
+    />
+    <meta property="og:title" content="red flag or green flag? 🚩🟢" />
+    <meta property="og:description" content="Paste what they said or did — get the red and green flags decoded, and a verdict. 100% local, nothing uploaded." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>red flag or green flag? <span class="flags">🚩🟢</span></h1>
+      <p class="tagline">Paste what they said or did. We decode the flags — and <strong>call it.</strong></p>
+      <p class="privacy">🔒 100% in your browser. Rule-based, no AI, nothing uploaded.</p>
+    </header>
+
+    <main>
+      <section class="input-card">
+        <div class="toolbar">
+          <button id="sample-red" type="button" class="ghost">A red one 🚩</button>
+          <button id="sample-green" type="button" class="ghost">A green one 🟢</button>
+          <button id="sample-mixed" type="button" class="ghost">A mixed one 🤔</button>
+          <button id="clear" type="button" class="ghost">Clear</button>
+        </div>
+        <textarea id="input" spellcheck="false" placeholder="Paste the texts, or describe what they said / did…"></textarea>
+      </section>
+
+      <section id="result" class="result hidden">
+        <div class="verdict-card">
+          <div id="label" class="verdict-label">Not enough to go on</div>
+          <div class="tiltbar"><div id="tilt-green" class="tilt-green"></div><div id="tilt-red" class="tilt-red"></div></div>
+          <div class="tally"><span id="tally-green" class="g">0 green</span> · <span id="tally-red" class="r">0 red</span></div>
+        </div>
+
+        <div class="columns">
+          <div class="col col-red">
+            <h3>🚩 Red flags <span class="dim">→ what it really means</span></h3>
+            <div id="red-list" class="list"></div>
+          </div>
+          <div class="col col-green">
+            <h3>🟢 Green flags <span class="dim">→ what it really means</span></h3>
+            <div id="green-list" class="list"></div>
+          </div>
+        </div>
+
+        <details class="raw">
+          <summary>Show the message with flags highlighted</summary>
+          <div id="highlighted" class="highlighted"></div>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://www.npmjs.com/package/red-flag-green-flag"><code>red-flag-green-flag</code></a> —
+        the same engine in a CLI: <code>npx red-flag-green-flag chat.txt</code>.
+        <a href="https://github.com/didrod205/red-flag-green-flag">GitHub</a> · MIT
+      </p>
+      <p class="dim">It's a meme, not couples therapy. A phrase isn't a verdict on a person — context always wins. Read the flags here; read the room yourself.</p>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

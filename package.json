@@ -1,0 +1,69 @@
+{
+  "name": "red-flag-green-flag",
+  "version": "0.1.0",
+  "description": "Paste what your date said or did and get the red flags 🚩 and green flags 🟢 decoded — 'doesn't believe in labels' → wants you available but not committed, 'text me when you get home safe' → genuinely cares. A verdict, a tilt meter, 100% local, rule-based, nothing uploaded.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "red-flag-green-flag": "./dist/cli.js",
+    "flagcheck": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js examples/red.txt",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "red-flag",
+    "green-flag",
+    "dating",
+    "relationships",
+    "texting",
+    "love",
+    "meme",
+    "no-api-key",
+    "cli"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/red-flag-green-flag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/red-flag-green-flag/issues"
+  },
+  "homepage": "https://github.com/didrod205/red-flag-green-flag#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.8"
+  }
+}
