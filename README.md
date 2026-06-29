@@ -133,3 +133,9 @@ MIT © [didrod205](https://github.com/didrod205)
 ---
 
 <sub>A rule-based decoder, not a relationship oracle. It reads the *clichés* — your judgment reads the room.</sub>
+
+## 💖 Sponsor
+
+Find this useful? [**Sponsor on GitHub**](https://github.com/sponsors/didrod205) — it keeps these projects maintained.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/didrod205)
